@@ -92,8 +92,8 @@ export default function DashboardApp() {
                 { label: 'Wind', value: 4443 },
               ]}
               chartColors={[
-                theme.palette.primary.main,
                 theme.palette.chart.blue[0],
+                theme.palette.chart.green[0],
                 theme.palette.chart.yellow[1],
                 theme.palette.chart.violet[0],
               ]}
