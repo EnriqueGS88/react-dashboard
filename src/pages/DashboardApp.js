@@ -11,6 +11,8 @@ import {
   OffsetsOrigin,
   PlantsFootprint,
 } from '../sections/@dashboard/app';
+// chart data
+import { balanceSeries } from '../components/chart/data';
 
 // ----------------------------------------------------------------------
 
@@ -64,13 +66,13 @@ export default function DashboardApp() {
                   name: 'Emissions',
                   type: 'area',
                   fill: 'gradient',
-                  data: [46, 50, 43, 40, 38, 36, 36, 39, 38, 40, 42, 44],
+                  data: balanceSeries.emissions,
                 },
                 {
                   name: 'Offsets',
                   type: 'line',
                   fill: 'solid',
-                  data: [44, 46, 50, 43, 40, 38, 36, 36, 39, 38, 40, 42],
+                  data: balanceSeries.offsets,
                 },
                 {
                   name: 'Net Emissions',
