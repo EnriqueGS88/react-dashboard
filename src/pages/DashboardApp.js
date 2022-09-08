@@ -27,7 +27,7 @@ export default function DashboardApp() {
     <Page title="Dashboard">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
+          Carbon Offsets Dashboard
         </Typography>
 
         <Grid container spacing={3}>
