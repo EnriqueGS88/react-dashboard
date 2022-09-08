@@ -1,6 +1,7 @@
 ## Minimal [(Free version)](https://minimal-kit-react.vercel.app/)
 
 Stats Dashboard Page only
+Uninstalled unnecessary node modules
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
