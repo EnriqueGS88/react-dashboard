@@ -5,11 +5,11 @@ import { Grid, Container, Typography } from '@mui/material';
 import Page from '../components/Page';
 // sections
 import {
-  AppCurrentVisits,
+  OffsetCategories,
   CarbonBalance,
   AppWidgetSummary,
-  AppCurrentSubject,
-  AppConversionRates,
+  OffsetsOrigin,
+  PlantsFootprint,
 } from '../sections/@dashboard/app';
 
 // ----------------------------------------------------------------------
@@ -83,26 +83,26 @@ export default function DashboardApp() {
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-            <AppCurrentVisits
-              title="Current Visits"
+            <OffsetCategories
+              title="Offset Categories"
               chartData={[
-                { label: 'America', value: 4344 },
-                { label: 'Asia', value: 5435 },
-                { label: 'Europe', value: 1443 },
-                { label: 'Africa', value: 4443 },
+                { label: 'Wetlands', value: 4344 },
+                { label: 'Reforestation', value: 5435 },
+                { label: 'Solar', value: 1443 },
+                { label: 'Wind', value: 4443 },
               ]}
               chartColors={[
                 theme.palette.primary.main,
                 theme.palette.chart.blue[0],
+                theme.palette.chart.yellow[1],
                 theme.palette.chart.violet[0],
-                theme.palette.chart.yellow[0],
               ]}
             />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
-            <AppConversionRates
-              title="Conversion Rates"
+            <PlantsFootprint
+              title="Plants Footprint"
               subheader="(+43%) than last year"
               chartData={[
                 { label: 'Italy', value: 400 },
@@ -120,8 +120,8 @@ export default function DashboardApp() {
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-            <AppCurrentSubject
-              title="Current Subject"
+            <OffsetsOrigin
+              title="Offsets Origin"
               chartLabels={['English', 'History', 'Physics', 'Geography', 'Chinese', 'Math']}
               chartData={[
                 { name: 'Series 1', data: [80, 50, 30, 40, 100, 20] },
