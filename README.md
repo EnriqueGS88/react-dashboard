@@ -2,6 +2,7 @@
 
 Stats Dashboard Page only
 Uninstalled unnecessary node modules
+Updated labels and data as per Carbon use case
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
