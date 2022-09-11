@@ -28,25 +28,25 @@ export default function DashboardApp() {
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
+            <AppWidgetSummary title="Carbon Emissions YTD" total={492} icon={'lucide:factory'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary title="Carbon Offsets YTD" total={496} color="info" icon={'icon-park-outline:sleaves'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Item Orders" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
+            <AppWidgetSummary title="Net Balance YTD" total={-4} color="teal" icon={'carbon:crop-growth'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
+            <AppWidgetSummary title="Net Balance 2022" total={16} color="error" icon={'entypo:gauge'} />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
             <CarbonBalance
-              title="Carbon Balance"
-              subheader="(+3%) than last year"
+              title="Global Carbon Balance"
+              subheader="(-125%) than last year"
               chartLabels={[
                 '01/01/2023',
                 '02/01/2023',
@@ -78,7 +78,7 @@ export default function DashboardApp() {
                   name: 'Net Emissions',
                   type: 'column',
                   fill: 'solid',
-                  data: [2, 4, -7, -3, -2, -2, 0, 3, -1, 2, 2, 2],
+                  data: [2, 4, -7, -3, -2, -2, 0, 3, -1, 2, 2, -2],
                 },
               ]}
             />
@@ -87,6 +87,7 @@ export default function DashboardApp() {
           <Grid item xs={12} md={6} lg={4}>
             <OffsetCategories
               title="Offset Categories"
+              subheader="Verra Classification"
               chartData={[
                 { label: 'Wetlands', value: 4344 },
                 { label: 'Reforestation', value: 5435 },
@@ -97,26 +98,22 @@ export default function DashboardApp() {
                 theme.palette.chart.blue[0],
                 theme.palette.chart.green[0],
                 theme.palette.chart.yellow[1],
-                theme.palette.chart.violet[0],
+                theme.palette.chart.green[3],
               ]}
             />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
             <PlantsFootprint
-              title="Plants Footprint"
-              subheader="(+43%) than last year"
+              title="Carbon Balance per Location"
+              subheader="(-40%) than last year"
               chartData={[
-                { label: 'Italy', value: 400 },
-                { label: 'Japan', value: 430 },
-                { label: 'China', value: 448 },
-                { label: 'Canada', value: 470 },
-                { label: 'France', value: 540 },
-                { label: 'Germany', value: 580 },
-                { label: 'South Korea', value: 690 },
-                { label: 'Netherlands', value: 1100 },
-                { label: 'United States', value: 1200 },
-                { label: 'United Kingdom', value: 1380 },
+                { label: 'Walldorf', value: 200 },
+                { label: 'Bengaluru', value: 130 },
+                { label: 'Prague', value: 100 },
+                { label: 'Palo Alto', value: 50 },
+                { label: 'New Delhi', value: 10 },
+                { label: 'Leon-Rot', value: 2 },
               ]}
             />
           </Grid>
@@ -124,11 +121,12 @@ export default function DashboardApp() {
           <Grid item xs={12} md={6} lg={4}>
             <OffsetsOrigin
               title="Offsets Origin"
-              chartLabels={['English', 'History', 'Physics', 'Geography', 'Chinese', 'Math']}
+              subheader="Millions CO2 tons"
+              chartLabels={['N-America', 'S-America', 'S-Europe', 'N-Europe', 'SE Asia', 'Africa']}
               chartData={[
-                { name: 'Series 1', data: [80, 50, 30, 40, 100, 20] },
-                { name: 'Series 2', data: [20, 30, 40, 80, 20, 80] },
-                { name: 'Series 3', data: [44, 76, 78, 13, 43, 10] },
+                { name: 'Walldorf', data: [0, 40, 80, 0, 30, 50] },
+                { name: 'Bengaluru', data: [10, 20, 40, 20, 0, 40] },
+                { name: 'Prague', data: [20, 0, 40, 15, 0, 25] },
               ]}
               chartColors={[...Array(6)].map(() => theme.palette.text.secondary)}
             />

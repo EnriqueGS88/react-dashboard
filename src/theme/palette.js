@@ -64,6 +64,15 @@ const SUCCESS = {
   contrastText: GREY[800],
 };
 
+const TEAL = {
+  lighter: '#C6FFFF',
+  light: '#00EEEE',
+  main: '#00D9D9',
+  dark: '#00A7A7',
+  darker: '#008080',
+  contrastText: GREY[800],
+};
+
 const WARNING = {
   lighter: '#FFF7CD',
   light: '#FFE16A',
@@ -86,6 +95,7 @@ const GRADIENTS = {
   primary: createGradient(PRIMARY.light, PRIMARY.main),
   info: createGradient(INFO.light, INFO.main),
   success: createGradient(SUCCESS.light, SUCCESS.main),
+  teal: createGradient(TEAL.light, TEAL.main),
   warning: createGradient(WARNING.light, WARNING.main),
   error: createGradient(ERROR.light, ERROR.main),
 };
@@ -104,6 +114,7 @@ const palette = {
   secondary: { ...SECONDARY },
   info: { ...INFO },
   success: { ...SUCCESS },
+  teal: { ...TEAL },
   warning: { ...WARNING },
   error: { ...ERROR },
   grey: GREY,
