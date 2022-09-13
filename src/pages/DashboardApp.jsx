@@ -1,8 +1,7 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
 import { Grid, Container, Typography } from '@mui/material';
-// components
-import Page from '../components/Page';
+
 // sections
 import {
   OffsetCategories,
@@ -20,7 +19,7 @@ export default function DashboardApp() {
   const theme = useTheme();
 
   return (
-    <Page title="Dashboard">
+
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
           Carbon Offsets Dashboard
@@ -133,6 +132,6 @@ export default function DashboardApp() {
           </Grid>
         </Grid>
       </Container>
-    </Page>
+
   );
 }
